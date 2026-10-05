@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Evently</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b16;
+      color: white;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 35px;
+      letter-spacing: 2px;
+    }
+
+    .card {
+      background: #151525;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 18px;
+      color: #ddd;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #33334d;
+      border-radius: 10px;
+      background: #0f0f1c;
+      color: white;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #8b5cf6;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 28px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #8b5cf6, #ec4899);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #aaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">EVENTLY ✦</div>
+
+    <div class="card">
+
+      <h1>Register for Event</h1>
+
+      <p class="subtitle">
+        Fill in your details to reserve your spot.
+      </p>
+
+      <form id="registrationForm">
+
+        <label>Full Name</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        >
+
+        <label>Email Address</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        >
+
+        <label>Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Enter your phone number"
+          required
+        >
+
+        <label>College / Organization</label>
+        <input
+          type="text"
+          name="college"
+          placeholder="Enter your college or organization"
+          required
+        >
+
+        <label>Select Event</label>
+
+        <select name="event" required>
+          <option value="">Choose an event</option>
+          <option value="Tech & AI Hackathon">💻 Tech & AI Hackathon</option>
+          <option value="Creative Design Workshop">🎨 Creative Design Workshop</option>
+          <option value="Campus Music Night">🎵 Campus Music Night</option>
+          <option value="Startup & Innovation Summit">🚀 Startup & Innovation Summit</option>
+          <option value="Photography Masterclass">📸 Photography Masterclass</option>
+          <option value="Open Mic Evening">🎤 Open Mic Evening</option>
+          <option value="AI Innovation Day">🤖 AI Innovation Day</option>
+          <option value="Campus Sports Fest">🏆 Campus Sports Fest</option>
+          <option value="Career & Internship Fair">💼 Career & Internship Fair</option>
+          <option value="CodeSprint Challenge">🧑‍💻 CodeSprint Challenge</option>
+          <option value="Short Film Festival">🎬 Short Film Festival</option>
+          <option value="Green Future Meetup">🌱 Green Future Meetup</option>
+        </select>
+
+        <button type="submit">
+          Complete Registration →
+        </button>
+
+      </form>
+
+      <a href="events.html" class="back">
+        ← Back to Events
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const form = document.getElementById("registrationForm");
+
+    form.addEventListener("submit", async (e) => {
+
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        college: formData.get("college"),
+        event: formData.get("event")
+      };
+
+      console.log("Sending data:", data);
+
+      try {
+
+        const response = await fetch("/api/register", {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        console.log("Server response:", result);
+
+        if (result.success) {
+
+          window.location.href = "success.html";
+
+        } else {
+
+          alert("Registration failed. Please try again.");
+
+        }
+
+      } catch (error) {
+
+        console.log(error);
+
+        alert("Something went wrong. Please try again.");
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

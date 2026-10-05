@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | Evently</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #070b18;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      height: 75px;
+      padding: 0 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(7, 11, 24, 0.92);
+      border-bottom: 1px solid #202846;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #8b5cf6;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #b8bfd6;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: white;
+    }
+
+    .nav-btn {
+      padding: 10px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: white !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: #4338ca;
+      filter: blur(180px);
+      opacity: 0.22;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid #373d67;
+      border-radius: 30px;
+      color: #a5b4fc;
+      font-size: 13px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+      position: relative;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #818cf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #9ca3b8;
+      line-height: 1.8;
+      font-size: 17px;
+      position: relative;
+    }
+
+    /* ABOUT CARDS */
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px 90px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #11172b, #0d1222);
+      border: 1px solid #242c4b;
+      border-radius: 22px;
+      padding: 32px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #6366f1;
+      box-shadow: 0 15px 40px rgba(79, 70, 229, 0.15);
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #312e81, #581c87);
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .card h2 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #9299ae;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* MISSION */
+
+    .mission {
+      margin-top: 25px;
+      padding: 50px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #151d3b, #101426);
+      border: 1px solid #29335a;
+      text-align: center;
+    }
+
+    .mission h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .mission p {
+      max-width: 720px;
+      margin: auto;
+      color: #9ca3b8;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #202846;
+      color: #777f98;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+
+      nav {
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-btn {
+        padding: 8px 12px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .mission {
+        padding: 35px 20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      EVENTLY <span>✦</span>
+    </div>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="events.html">Events</a>
+
+      <a href="about.html" class="active">About</a>
+
+      <a href="register.html" class="nav-btn">
+        Register
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="tag">
+      ✦ ABOUT EVENTLY
+    </div>
+
+    <h1>
+      We Make Events<br>
+      <span>Worth Remembering.</span>
+    </h1>
+
+    <p>
+      Evently is a simple and modern event registration platform
+      designed to help students discover exciting events,
+      explore new experiences and register with ease.
+    </p>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <section class="section">
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="icon">🎯</div>
+
+        <h2>Discover</h2>
+
+        <p>
+          Explore technology, creativity, music, career,
+          sports and community events — all in one place.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">⚡</div>
+
+        <h2>Register Easily</h2>
+
+        <p>
+          Find an event you love and complete your
+          registration through a simple and smooth process.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">✨</div>
+
+        <h2>Experience</h2>
+
+        <p>
+          Connect with people, learn something new
+          and create memorable experiences through events.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- MISSION -->
+
+    <div class="mission">
+
+      <h2>Our Mission</h2>
+
+      <p>
+        Our mission is to make event discovery and
+        registration simple, accessible and enjoyable.
+        Evently brings everything together so you can
+        spend less time searching and more time experiencing.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Evently ✦ Discover. Register. Experience.
+  </footer>
+
+
+</body>
+</html>

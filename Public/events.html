@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evently | Events</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0b0b16;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .heading {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: radial-gradient(circle at top, #30205c, #0b0b16 60%);
+        }
+
+        .heading h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .heading h1 span {
+            color: #a78bfa;
+        }
+
+        .heading p {
+            color: #aaaabb;
+            font-size: 17px;
+        }
+
+        .search {
+            width: 80%;
+            max-width: 600px;
+            margin: 35px auto;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 17px 22px;
+            border-radius: 30px;
+            border: 1px solid #33334a;
+            background: #171725;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .events {
+            padding: 30px 8% 80px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #171725;
+            border: 1px solid #29293b;
+            border-radius: 22px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #a78bfa;
+            box-shadow: 0 15px 35px rgba(167, 139, 250, 0.15);
+        }
+
+        .icon {
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #30205c, #171725);
+            border-radius: 16px;
+            font-size: 65px;
+            margin-bottom: 22px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #a78bfa;
+            background: #241d3d;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .info {
+            color: #aaaabb;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            color: #a78bfa;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888899;
+            border-top: 1px solid #222233;
+        }
+
+        @media (max-width: 850px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .heading h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">EVENTLY ✦</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+        </div>
+    </nav>
+
+    <section class="heading">
+
+        <h1>Explore <span>Events.</span></h1>
+
+        <p>
+            Find something exciting to experience, learn and enjoy.
+        </p>
+
+        <div class="search">
+            <input type="text" placeholder="🔍  Search events...">
+        </div>
+
+    </section>
+
+    <section class="events">
+
+        <div class="cards">
+
+            <!-- 1 -->
+            <div class="card">
+                <div class="icon">💻</div>
+                <span class="tag">TECHNOLOGY</span>
+                <h3>Tech & AI Hackathon</h3>
+                <p class="info">
+                    📅 5 October 2026<br>
+                    🕐 10:00 AM<br>
+                    📍 Raipur
+                </p>
+                <a href="event-details.html?event=hackathon">View Details →</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="card">
+                <div class="icon">🎨</div>
+                <span class="tag">CREATIVE</span>
+                <h3>Creative Design Workshop</h3>
+                <p class="info">
+                    📅 12 October 2026<br>
+                    🕐 11:00 AM<br>
+                    📍 Bhilai
+                </p>
+                <a href="event-details.html?event=design">View Details →</a>
+            </div>
+
+            <!-- 3 -->
+            <div class="card">
+                <div class="icon">🎵</div>
+                <span class="tag">MUSIC</span>
+                <h3>Campus Music Night</h3>
+                <p class="info">
+                    📅 18 October 2026<br>
+                    🕐 6:00 PM<br>
+                    📍 Durg
+                </p>
+                <a href="event-details.html?event=music">View Details →</a>
+            </div>
+
+            <!-- 4 -->
+            <div class="card">
+                <div class="icon">🚀</div>
+                <span class="tag">STARTUP</span>
+                <h3>Startup & Innovation Summit</h3>
+                <p class="info">
+                    📅 22 October 2026<br>
+                    🕐 10:30 AM<br>
+                    📍 Raipur
+                </p>
+                <a href="event-details.html?event=startup">View Details →</a>
+            </div>
+
+            <!-- 5 -->
+            <div class="card">
+                <div class="icon">📸</div>
+                <span class="tag">CREATIVE</span>
+                <h3>Photography Masterclass</h3>
+                <p class="info">
+                    📅 26 October 2026<br>
+                    🕐 2:00 PM<br>
+                    📍 Bhilai
+                </p>
+                <a href="event-details.html?event=photography">View Details →</a>
+            </div>
+
+            <!-- 6 -->
+            <div class="card">
+                <div class="icon">🎤</div>
+                <span class="tag">ENTERTAINMENT</span>
+                <h3>Open Mic Evening</h3>
+                <p class="info">
+                    📅 30 October 2026<br>
+                    🕐 5:30 PM<br>
+                    📍 Durg
+                </p>
+                <a href="event-details.html?even=openmic">View Details →</a>
+            </div>
+
+            <!-- 7 -->
+            <div class="card">
+                <div class="icon">🤖</div>
+                <span class="tag">AI & ML</span>
+                <h3>AI Innovation Day</h3>
+                <p class="info">
+                    📅 2 November 2026<br>
+                    🕐 10:00 AM<br>
+                    📍 Raipur
+                </p>
+                <a href="event-details.html?event=ai">View Details →</a>
+            </div>
+
+            <!-- 8 -->
+            <div class="card">
+                <div class="icon">🏆</div>
+                <span class="tag">SPORTS</span>
+                <h3>Campus Sports Fest</h3>
+                <p class="info">
+                    📅 6 November 2026<br>
+                    🕐 9:00 AM<br>
+                    📍 Bhilai
+                </p>
+                <a href="event-details.html?event=sports">View Details →</a>
+            </div>
+
+            <!-- 9 -->
+            <div class="card">
+                <div class="icon">💼</div>
+                <span class="tag">CAREER</span>
+                <h3>Career & Internship Fair</h3>
+                <p class="info">
+                    📅 10 November 2026<br>
+                    🕐 11:00 AM<br>
+                    📍 Durg
+                </p>
+                <a href="event-details.html?event=carrer">View Details →</a>
+            </div>
+
+            <!-- 10 -->
+            <div class="card">
+                <div class="icon">🧑‍💻</div>
+                <span class="tag">CODING</span>
+                <h3>CodeSprint Challenge</h3>
+                <p class="info">
+                    📅 15 November 2026<br>
+                    🕐 9:30 AM<br>
+                    📍 Raipur
+                </p>
+                <a href="event-details.html?event=coding">View Details →</a>
+            </div>
+
+            <!-- 11 -->
+            <div class="card">
+                <div class="icon">🎬</div>
+                <span class="tag">MEDIA</span>
+                <h3>Short Film Festival</h3>
+                <p class="info">
+                    📅 20 November 2026<br>
+                    🕐 4:00 PM<br>
+                    📍 Bhilai
+                </p>
+                <a href="event-details.html?event=film">View Details →</a>
+            </div>
+
+            <!-- 12 -->
+            <div class="card">
+                <div class="icon">🌱</div>
+                <span class="tag">COMMUNITY</span>
+                <h3>Green Future Meetup</h3>
+                <p class="info">
+                    📅 25 November 2026<br>
+                    🕐 10:30 AM<br>
+                    📍 Durg
+                </p>
+                <a href="event-details.html?event=green">View Details →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Evently • Discover. Register. Experience.
+    </footer>
+<script>
+const searchInput = document.querySelector(".search input");
+const eventCards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("input", function () {
+    const searchText = searchInput.value.toLowerCase();
+
+    eventCards.forEach(card => {
+        const eventText = card.innerText.toLowerCase();
+
+        if (eventText.includes(searchText)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

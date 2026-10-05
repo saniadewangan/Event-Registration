@@ -1,0 +1,270 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evently | Event Details</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0b0b16;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .details-section {
+            max-width: 650px;
+            margin: 60px auto;
+            padding: 45px;
+            background: #171725;
+            border: 1px solid #29293b;
+            border-radius: 22px;
+        }
+
+        .icon-big {
+            font-size: 65px;
+            margin-bottom: 18px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #a78bfa;
+            background: #241d3d;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        .details-section h1 {
+            font-size: 34px;
+            margin-bottom: 18px;
+        }
+
+        .meta {
+            color: #aaaabb;
+            line-height: 2;
+            margin-bottom: 22px;
+            font-size: 15px;
+        }
+
+        .desc {
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .register-btn {
+            display: inline-block;
+            background: #a78bfa;
+            color: #0b0b16;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 25px;
+            color: #888899;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888899;
+            border-top: 1px solid #222233;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">EVENTLY ✦</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+        </div>
+    </nav>
+
+    <section class="details-section" id="details">
+        <!-- JS will fill this -->
+    </section>
+
+    <footer>
+        © 2026 Evently • Discover. Register. Experience.
+    </footer>
+
+    <script>
+        const eventData = {
+            hackathon: {
+                icon: "💻",
+                tag: "TECHNOLOGY",
+                title: "Tech & AI Hackathon",
+                date: "5 October 2026",
+                time: "10:00 AM",
+                location: "Raipur",
+                desc: "Build innovative solutions and experience the world of technology. Collaborate with fellow developers and designers to create something impactful within 24 hours."
+            },
+            design: {
+                icon: "🎨",
+                tag: "CREATIVE",
+                title: "Creative Design Workshop",
+                date: "12 October 2026",
+                time: "11:00 AM",
+                location: "Bhilai",
+                desc: "Learn creative design skills and turn your ideas into reality. A hands-on session covering UI/UX, branding and visual storytelling."
+            },
+            music: {
+                icon: "🎵",
+                tag: "MUSIC",
+                title: "Campus Music Night",
+                date: "18 October 2026",
+                time: "6:00 PM",
+                location: "Durg",
+                desc: "Music, friends and unforgettable moments all in one evening. Enjoy live performances from campus bands and solo artists."
+            },
+            startup: {
+                icon: "🚀",
+                tag: "STARTUP",
+                title: "Startup & Innovation Summit",
+                date: "22 October 2026",
+                time: "10:30 AM",
+                location: "Raipur",
+                desc: "Meet founders, investors and innovators shaping tomorrow. Get insights on building and scaling a startup from scratch."
+            },
+            photography: {
+                icon: "📸",
+                tag: "CREATIVE",
+                title: "Photography Masterclass",
+                date: "26 October 2026",
+                time: "2:00 PM",
+                location: "Bhilai",
+                desc: "Master the art of photography with expert guidance. Learn composition, lighting and editing techniques."
+            },
+            openmic: {
+                icon: "🎤",
+                tag: "ENTERTAINMENT",
+                title: "Open Mic Evening",
+                date: "30 October 2026",
+                time: "5:30 PM",
+                location: "Durg",
+                desc: "Share your talent on stage in front of a live crowd. Poetry, music, comedy — everyone is welcome."
+            },
+            ai: {
+                icon: "🤖",
+                tag: "AI & ML",
+                title: "AI Innovation Day",
+                date: "2 November 2026",
+                time: "10:00 AM",
+                location: "Raipur",
+                desc: "Explore the latest breakthroughs in artificial intelligence. Hear from experts and see live AI demos."
+            },
+            sports: {
+                icon: "🏆",
+                tag: "SPORTS",
+                title: "Campus Sports Fest",
+                date: "6 November 2026",
+                time: "9:00 AM",
+                location: "Bhilai",
+                desc: "Compete, cheer and celebrate the spirit of sportsmanship. A full day of athletic events and team sports."
+            },
+            carrer: {
+                icon: "💼",
+                tag: "CAREER",
+                title: "Career & Internship Fair",
+                date: "10 November 2026",
+                time: "11:00 AM",
+                location: "Durg",
+                desc: "Connect with top companies for jobs and internships. Bring your resume and meet recruiters face to face."
+            },
+            coding: {
+                icon: "🧑‍💻",
+                tag: "CODING",
+                title: "CodeSprint Challenge",
+                date: "15 November 2026",
+                time: "9:30 AM",
+                location: "Raipur",
+                desc: "A fast-paced coding competition for problem solvers. Test your skills against the clock and fellow coders."
+            },
+            film: {
+                icon: "🎬",
+                tag: "MEDIA",
+                title: "Short Film Festival",
+                date: "20 November 2026",
+                time: "4:00 PM",
+                location: "Bhilai",
+                desc: "Showcase your storytelling through the power of film. Student filmmakers present their best short films."
+            },
+            green: {
+                icon: "🌱",
+                tag: "COMMUNITY",
+                title: "Green Future Meetup",
+                date: "25 November 2026",
+                time: "10:30 AM",
+                location: "Durg",
+                desc: "Join the community building a sustainable tomorrow. Discuss climate action and eco-friendly initiatives."
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const eventKey = params.get("event");
+        const event = eventData[eventKey];
+
+        const container = document.getElementById("details");
+
+        if (event) {
+            container.innerHTML = `
+                <div class="icon-big">${event.icon}</div>
+                <span class="tag">${event.tag}</span>
+                <h1>${event.title}</h1>
+                <div class="meta">
+                    📅 ${event.date}<br>
+                    🕐 ${event.time}<br>
+                    📍 ${event.location}
+                </div>
+                <p class="desc">${event.desc}</p>
+                <a class="register-btn" href="register.html?event=${eventKey}">Register Now →</a>
+                <a class="back-link" href="events.html">← Back to all events</a>
+            `;
+        } else {
+            container.innerHTML = `
+                <h1>Event not found</h1>
+                <p class="desc">Sorry, we couldn't find the event you're looking for.</p>
+                <a class="back-link" href="events.html">← Back to all events</a>
+            `;
+        }
+    </script>
+
+</body>
+</html>
