@@ -12,9 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.send("Event Registration Server is Running!");
-});
 
 const registrationSchema = new mongoose.Schema({
   name: String,
